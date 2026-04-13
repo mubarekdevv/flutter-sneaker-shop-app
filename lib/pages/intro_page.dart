@@ -1,3 +1,4 @@
+import 'package:ecommerce_app_ui/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatelessWidget {
@@ -43,7 +44,9 @@ class IntroPage extends StatelessWidget {
             //start now button
             ElevatedButton(
               onPressed: () {
-                
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return HomePage();
+                },));
               },
               child: Text(
                 'Shop now',
