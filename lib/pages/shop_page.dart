@@ -1,3 +1,4 @@
+import 'package:ecommerce_app_ui/components/shoe_tile.dart';
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatefulWidget {
@@ -8,6 +9,8 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
+  get shoe => null;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,9 +35,30 @@ class _ShopPageState extends State<ShopPage> {
          Padding(
            padding: const EdgeInsets.symmetric(vertical: 25),
            child: Text('everyone flies.. some fly longer than others', style: TextStyle(color: Colors.grey[600]),),
-         )
+         ),
 
           //hot pics of shoes
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Hot Pics 🔥', style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  ),),
+                Text('See all', style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue
+                ),)
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
+
+          ListView.builder(itemBuilder: (context, index) {
+            return ShoeTile(shoe: shoe);
+          },)
 
       ],
     );
