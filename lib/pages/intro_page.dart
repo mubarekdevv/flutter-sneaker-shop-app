@@ -56,10 +56,10 @@ class IntroPage extends StatelessWidget {
                 ),
               ),
               style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey[900],
+                  backgroundColor: Colors.black,
                   minimumSize: Size(440, 70),
-                  elevation: 20,
-                  shadowColor: Colors.grey,
+                  elevation: 40,
+                  shadowColor: Colors.black,
                   // side: BorderSide(color: Colors.black, width: 2),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12))),

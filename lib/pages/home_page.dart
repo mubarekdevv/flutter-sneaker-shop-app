@@ -35,7 +35,68 @@ class _HomePageState extends State<HomePage> {
         //the ff is to navigating the bottom bar
         onTabChangeu: (index) => updateCurrentSelectedIndex(index),
       ),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: Icon(Icons.menu),
+            );
+          }
+        ),
+        
+      ),
       body: pages[currentSelectedIndex],
+      drawer: Drawer(
+        backgroundColor: Colors.grey[900],
+        child: Column(
+          children: [
+            Column(
+              children: [
+                DrawerHeader(
+                  
+                  child: Image.asset(
+                  'assets/images/nikelogo.png',
+                  color: Colors.white,)
+                  ),
+                  Divider(
+                    color: Colors.grey[900],
+                  ),
+                ListTile(
+                  leading: Icon(Icons.home, color: Colors.white,),
+                  title: Text('H O M E', style: TextStyle(
+                    color: Colors.white
+                  ),),
+                ),
+                ListTile(
+                  leading: Icon(
+                    Icons.info,
+                    color: Colors.white,
+                  ),
+                  title: Text(
+                    'A B O U T',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            
+            ListTile(
+              leading: Icon(
+                Icons.logout,
+                color: Colors.white,
+              ),
+              title: Text(
+                'L O G O U T',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
