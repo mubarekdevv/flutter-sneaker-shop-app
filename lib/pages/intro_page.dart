@@ -24,7 +24,43 @@ class IntroPage extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            
+            //sub title
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Text(
+                'Brand new sneakers and custom kicks made wit premium quality',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.grey,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            //start now button
+            ElevatedButton(
+              onPressed: () {
+                
+              },
+              child: Text(
+                'Shop now',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey[900],
+                  minimumSize: Size(440, 70),
+                  elevation: 20,
+                  shadowColor: Colors.grey,
+                  // side: BorderSide(color: Colors.black, width: 2),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12))),
+            )
           ],
         ),
       ),
