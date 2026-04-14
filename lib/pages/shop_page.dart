@@ -1,4 +1,5 @@
 import 'package:ecommerce_app_ui/components/shoe_tile.dart';
+import 'package:ecommerce_app_ui/models/shoe.dart';
 import 'package:flutter/material.dart';
 
 class ShopPage extends StatefulWidget {
@@ -9,7 +10,6 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
-  get shoe => null;
 
   @override
   Widget build(BuildContext context) {
@@ -56,11 +56,20 @@ class _ShopPageState extends State<ShopPage> {
           ),
           const SizedBox(height: 10),
 
-          ListView.builder(itemBuilder: (context, index) {
-            return ShoeTile(shoe: shoe);
-          },)
+          Expanded(
+            child: ListView.builder(
+              itemCount: 4,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+              //create  shoe
+              Shoe shoe = Shoe(name: 'Air Nike', price: '240', imagePath: 'assets/images/airnike.png', description: 'cool shoe');
+              return ShoeTile(
+                shoe: shoe);
+            },),
+          )
 
       ],
     );
   }
 }
+                
