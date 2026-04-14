@@ -32,9 +32,14 @@ class Cart {
   List<Shoe> userCart = [];
 
   //get list of shoes for sale
-  
+  List<Shoe> getShoeList() {
+    return shoeShop;
+  }
 
   // get cart
+  List<Shoe> getUserCart(){
+    return userCart;
+  }
 
   //add items to cart
 
