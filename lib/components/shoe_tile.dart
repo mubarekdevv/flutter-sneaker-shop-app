@@ -27,7 +27,29 @@ class ShoeTile extends StatelessWidget {
             ),),
 
             //price + details
-            
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    //shoe name
+                    Text(shoe.name, style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    ),),
+
+                    //price
+                    Text("\$" + shoe.price)
+                  ],
+                ),
+
+                //plus button
+                
+              ],
+            ),
+
+
             //bottom to add cart
           ],
         ),
