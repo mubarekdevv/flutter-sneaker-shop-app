@@ -62,7 +62,11 @@ class _ShopPageState extends State<ShopPage> {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
               //create  shoe
-              Shoe shoe = Shoe(name: 'Air Nike', price: '240', imagePath: 'assets/images/airnike.png', description: 'cool shoe');
+              Shoe shoe = Shoe(
+                name: 'Air Nike',
+                price: '240', 
+                imagePath: 'assets/images/image.png', 
+                description: 'cool shoe');
               return ShoeTile(
                 shoe: shoe);
             },),
@@ -72,4 +76,3 @@ class _ShopPageState extends State<ShopPage> {
     );
   }
 }
-                

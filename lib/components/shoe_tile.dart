@@ -14,14 +14,20 @@ class ShoeTile extends StatelessWidget {
         color: Colors.grey[100], 
         borderRadius: BorderRadius.circular(10)),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             //shoe pic
-            Image.asset('assets/images/airnike.png')
+            ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.asset(shoe.imagePath)),
 
             //description
+            Text(shoe.description, style: TextStyle(
+              color: Colors.grey[600]
+            ),),
 
             //price + details
-
+            
             //bottom to add cart
           ],
         ),
