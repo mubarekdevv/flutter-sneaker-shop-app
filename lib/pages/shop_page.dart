@@ -70,7 +70,13 @@ class _ShopPageState extends State<ShopPage> {
               return ShoeTile(
                 shoe: shoe);
             },),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 25,right: 25,top: 25),
+            child: Divider(color: Colors.grey[300],),
           )
+          // SizedBox(height: 50,) both works
 
       ],
     );

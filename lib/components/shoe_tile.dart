@@ -8,10 +8,11 @@ class ShoeTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 25),
+      margin: EdgeInsets.only(left: 25, right: 25),
       width: 280,
+      // height: 350,
       decoration: BoxDecoration(
-        color: Colors.grey[100], 
+        color: Colors.white, 
         borderRadius: BorderRadius.circular(10)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -27,36 +28,42 @@ class ShoeTile extends StatelessWidget {
             ),),
 
             //price + details
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    //shoe name
-                    Text(shoe.name, style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
-                    ),),
-
-                    //price
-                    Text("\$" + shoe.price)
-                  ],
-                ),
-
-                //plus button
-                Container(
-                  padding: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(12), 
-                      topLeft: Radius.circular(12))
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      //shoe name
+                      Text(shoe.name, style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold
+                      ),),
+                      SizedBox(height: 5,),
+              
+                      //price
+                      Text("\$" + shoe.price, style: TextStyle(
+                        color: Colors.grey
+                      ),)
+                    ],
                   ),
-                  child: Icon(Icons.add, color: Colors.white,))
-              ],
+              
+                  //plus button
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.only(
+                        bottomRight: Radius.circular(12), 
+                        topLeft: Radius.circular(12))
+                    ),
+                    child: Icon(Icons.add, color: Colors.white,))
+                ],
+              ),
             ),
-
 
             //bottom to add cart
           ],

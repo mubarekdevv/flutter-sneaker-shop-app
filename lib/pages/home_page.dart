@@ -50,6 +50,7 @@ class _HomePageState extends State<HomePage> {
         
       ),
       body: pages[currentSelectedIndex],
+      
       drawer: Drawer(
         backgroundColor: Colors.grey[900],
         child: Column(
