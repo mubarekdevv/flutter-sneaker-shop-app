@@ -1,6 +1,7 @@
 import 'package:ecommerce_app_ui/models/shoe.dart';
+import 'package:flutter/material.dart';
 
-class Cart {
+class Cart extends ChangeNotifier {
   //list of shoes for sale
   List<Shoe> shoeShop = [
     Shoe(
@@ -44,11 +45,14 @@ class Cart {
   //add items to cart
   void addItemToCart(Shoe shoe){
     userCart.add(shoe);
+    //we have to notify listeners anytime we need to update the state. So we need this to sort of deal with having a lot of diffrent states in a few different pages like the cart as well as the shop page. And so we have to go to our shop pge page and wrap everything in a consumer
+    notifyListeners();
   }
 
   //remove item from cart
   void removeItemFromCart(Shoe shoe){
     userCart.remove(shoe);
+    notifyListeners();
   }
 }
 

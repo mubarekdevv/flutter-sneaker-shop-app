@@ -1,6 +1,8 @@
 import 'package:ecommerce_app_ui/components/shoe_tile.dart';
+import 'package:ecommerce_app_ui/models/cart.dart';
 import 'package:ecommerce_app_ui/models/shoe.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -13,7 +15,9 @@ class _ShopPageState extends State<ShopPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Consumer<Cart>(builder: (context, value, child) {
+      return
+      Column(
       children: [
         // search bar
         Container(
@@ -56,6 +60,7 @@ class _ShopPageState extends State<ShopPage> {
           ),
           const SizedBox(height: 10),
 
+          // list of shoes for sale
           Expanded(
             child: ListView.builder(
               itemCount: 4,
@@ -80,5 +85,6 @@ class _ShopPageState extends State<ShopPage> {
 
       ],
     );
+    },);
   }
 }
