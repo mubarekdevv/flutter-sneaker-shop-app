@@ -2,8 +2,10 @@ import 'package:ecommerce_app_ui/models/shoe.dart';
 import 'package:flutter/material.dart';
 
 class ShoeTile extends StatelessWidget {
+
+  void Function()? onTap;
   Shoe shoe;
-  ShoeTile({super.key, required this.shoe});
+  ShoeTile({super.key, required this.shoe, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -55,15 +57,20 @@ class ShoeTile extends StatelessWidget {
                   ),
               
                   //plus button
-                  Container(
-                    padding: EdgeInsets.all(20),
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(12), 
-                        topLeft: Radius.circular(12))
-                    ),
-                    child: Icon(Icons.add, color: Colors.white,))
+                  //to make this plus icon clickable we have to wrpa it with gesture detecture
+                  GestureDetector(
+                    onTap: onTap,
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(12), 
+                          topLeft: Radius.circular(12))
+                      ),
+                      child: Icon(Icons.add, color: Colors.white,)
+                      ),
+                  )
                 ],
               ),
             ),

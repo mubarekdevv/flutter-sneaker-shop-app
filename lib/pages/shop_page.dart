@@ -13,6 +13,21 @@ class ShopPage extends StatefulWidget {
 
 class _ShopPageState extends State<ShopPage> {
 
+  //add shoetocart method, so we've created it we just need to access it using our provider
+  void addShoeToCart(Shoe shoe){
+    Provider.of<Cart>(context, listen: false).addItemToCart(shoe);
+    //one good thing from experience is we should let the user know something happen so if we added it to the Cart let's just create a show dialoge, so alert the user, shoe successfully added
+    showDialog(
+      context: context, 
+      builder: (context) {
+        return
+        AlertDialog(
+          title: Text('Successfully added!'),
+          content: Text('Check your cart..'),
+        );
+      },);
+  }
+
   @override
   Widget build(BuildContext context) {
     //so since it is wrapped with Consumer we can consume the data so if we look at this "value" in "(context, value, child)" we can say coming down to the listview builder...
@@ -79,12 +94,14 @@ class _ShopPageState extends State<ShopPage> {
               Shoe shoe = value.getShoeList()[index];
               // return shoe
               return ShoeTile(
-                shoe: shoe);
+                shoe: shoe,
+                onTap: () => addShoeToCart(shoe),
+                );
             },),
           ),
 
           Padding(
-            padding: const EdgeInsets.only(left: 25,right: 25,top: 25),
+            padding: const EdgeInsets.only(left: 25,right: 25,top: 10),
             child: Divider(color: Colors.grey[300],),
           )
           // SizedBox(height: 50,) both works
