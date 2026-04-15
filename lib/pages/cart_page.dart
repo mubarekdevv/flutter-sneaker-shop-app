@@ -26,7 +26,7 @@ class CartPage extends StatelessWidget {
             //get individual shoe
             Shoe indiviualShoe = value.getUserCart()[index];
             //return the cart item
-            return CartItem(shoe: indiviualShoe);
+            return CartItem(shoe: indiviualShoe,onTap: () => value.removeItemFromCart(indiviualShoe),);
           },))
         ],
       ),

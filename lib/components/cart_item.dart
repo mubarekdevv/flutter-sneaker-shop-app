@@ -2,10 +2,12 @@ import 'package:ecommerce_app_ui/models/shoe.dart';
 import 'package:flutter/material.dart';
 
 class CartItem extends StatefulWidget {
+  void Function()? onTap;
   Shoe shoe;
   CartItem({
     super.key, 
     required this.shoe,
+    required this.onTap
     });
 
   @override
@@ -26,6 +28,9 @@ class _CartItemState extends State<CartItem> {
         leading: Image.asset(widget.shoe.imagePath),
         title: Text(widget.shoe.name),
         subtitle: Text('\$' + widget.shoe.price),
+        trailing: GestureDetector(
+          onTap: widget.onTap,
+          child: Icon(Icons.delete, )),
       ),
     );
   }
