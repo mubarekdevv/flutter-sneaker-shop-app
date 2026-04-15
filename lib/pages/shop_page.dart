@@ -15,6 +15,7 @@ class _ShopPageState extends State<ShopPage> {
 
   @override
   Widget build(BuildContext context) {
+    //so since it is wrapped with Consumer we can consume the data so if we look at this "value" in "(context, value, child)" we can say coming down to the listview builder...
     return Consumer<Cart>(builder: (context, value, child) {
       return
       Column(
@@ -67,11 +68,16 @@ class _ShopPageState extends State<ShopPage> {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
               //create  shoe
-              Shoe shoe = Shoe(
-                name: 'Air Nike',
-                price: '240', 
-                imagePath: 'assets/images/image.png', 
-                description: 'cool shoe');
+              //right here we kind of manually input it in so we have to do instead of this commentedbelow
+
+              // Shoe shoe = Shoe(
+              //   name: 'Air Nike',
+              //   price: '240', 
+              //   imagePath: 'assets/images/image.png', 
+              //   description: 'cool shoe');
+              //get a shoe from shop list. the index is going from zero to the item count that was specified
+              Shoe shoe = value.getShoeList()[index];
+              // return shoe
               return ShoeTile(
                 shoe: shoe);
             },),
