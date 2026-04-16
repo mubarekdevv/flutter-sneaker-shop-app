@@ -68,6 +68,10 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.grey[900],
                   ),
                 ListTile(
+                  onTap: () {
+                    updateCurrentSelectedIndex(0); //to go to shop page since it's at o index
+                    Navigator.pop(context); // to close the drawer when home is tapped
+                  },
                   leading: Icon(Icons.home, color: Colors.white,),
                   title: Text('H O M E', style: TextStyle(
                     color: Colors.white

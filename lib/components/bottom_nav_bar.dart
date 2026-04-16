@@ -21,7 +21,7 @@ class MyBottomNavBar extends StatelessWidget {
         tabBackgroundColor: Colors.grey.shade100,
         mainAxisAlignment: MainAxisAlignment.center,
 
-/*The job of the ff onTanChange property is to pass the selected tab number (0 for Shop, 1 for Cart) from the custom navigation bar back up to the HomePage.
+/*The job of the ff onTabChange property is to pass the selected tab number (0 for Shop, 1 for Cart) from the custom navigation bar back up to the HomePage.
 🔍 Breakdown
 The Outer onTabChange: This belongs to the Google Nav Bar (GNav) package. It triggers automatically and gives you a value (the index number of the tab clicked).
 The Inner onTabChange!(value): This is the custom function you created at the top of your MyBottomNavBar class.
