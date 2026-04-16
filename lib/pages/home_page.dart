@@ -1,5 +1,6 @@
 import 'package:ecommerce_app_ui/components/bottom_nav_bar.dart';
 import 'package:ecommerce_app_ui/pages/cart_page.dart';
+import 'package:ecommerce_app_ui/pages/intro_page.dart';
 import 'package:ecommerce_app_ui/pages/shop_page.dart';
 import 'package:flutter/material.dart';
 class HomePage extends StatefulWidget {
@@ -93,6 +94,12 @@ class _HomePageState extends State<HomePage> {
             ),
             
             ListTile(
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                  return IntroPage();
+                },));
+              },
               leading: Icon(
                 Icons.logout,
                 color: Colors.white,
