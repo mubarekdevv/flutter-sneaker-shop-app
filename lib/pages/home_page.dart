@@ -78,6 +78,8 @@ class _HomePageState extends State<HomePage> {
                   ),),
                 ),
                 ListTile(
+                  onTap: () => 
+                  Navigator.pop(context),
                   leading: Icon(
                     Icons.info,
                     color: Colors.white,
