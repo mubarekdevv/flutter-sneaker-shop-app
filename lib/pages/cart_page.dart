@@ -18,7 +18,7 @@ class CartPage extends StatelessWidget {
             fontSize: 24,
             fontWeight: FontWeight.bold
           ),),
-          SizedBox(height: 10,),
+          
 
           Expanded(child: ListView.builder(
             itemCount: value.getUserCart().length,
