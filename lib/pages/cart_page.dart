@@ -15,7 +15,7 @@ class CartPage extends StatelessWidget {
       child: Column(
         children: [
           Text('My Cart', style: TextStyle(
-            fontSize: 24,
+            
             fontWeight: FontWeight.bold
           ),),
           SizedBox(height: 10,),
