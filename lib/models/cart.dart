@@ -47,6 +47,9 @@ class Cart extends ChangeNotifier {
     if (userCart.contains(shoe)) {
       shoe.quantity++;
     }
+    else {
+      userCart.add(shoe);
+    }
     // userCart.add(shoe);
     //we have to notify listeners anytime we need to update the state. So we need this to sort of deal with having a lot of diffrent states in a few different pages like the cart as well as the shop page. And so we have to go to our shop pge page and wrap everything in a consumer
     notifyListeners();
