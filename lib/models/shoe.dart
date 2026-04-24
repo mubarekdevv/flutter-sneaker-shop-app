@@ -10,7 +10,7 @@ class Shoe {
     required this.price,
     required this.imagePath,
     required this.description,
-    this.quantity = 1,
+    
     }
   );
 }
