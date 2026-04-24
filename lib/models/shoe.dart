@@ -3,7 +3,7 @@ class Shoe {
   final String price;
   final String imagePath;
   final String description;
-  int quantity;
+ 
 
   Shoe(
     {required this.name,
