@@ -55,7 +55,11 @@ class Cart extends ChangeNotifier {
     notifyListeners();
   }
 
-  
+  //remove item from cart
+  void removeItemFromCart(Shoe shoe){
+    userCart.remove(shoe);
+    notifyListeners();// really important b/c it tells Consumer to rebuild the list
+  }
 }
 
 
