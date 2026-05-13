@@ -20,7 +20,7 @@ class CartPage extends StatelessWidget {
           SizedBox(height: 10,),
 
           Expanded(child: ListView.builder(
-            itemCount: value.getUserCart().length,
+           
             itemBuilder: (context, index) {
             //get individual shoe
             Shoe indiviualShoe = value.getUserCart()[index];
