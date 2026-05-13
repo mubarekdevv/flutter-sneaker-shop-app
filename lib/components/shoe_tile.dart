@@ -34,7 +34,7 @@ class ShoeTile extends StatelessWidget {
 
             //price + details
             Padding(
-            
+              padding: const EdgeInsets.only(left: 10),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
