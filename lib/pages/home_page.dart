@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
-              icon: Icon(Icons.star),
+              icon: Icon(Icons.menu),
             );
           }
         ),
