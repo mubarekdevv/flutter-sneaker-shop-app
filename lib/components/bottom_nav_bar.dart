@@ -35,7 +35,6 @@ In short, it acts like a bridge. It catches the click from the Google Nav Bar pa
         GButton(
           
           icon: Icons.home,
-          iconActiveColor: Colors.black,
           text: 'SHOP',
           textColor: Colors.black,
           ),
