@@ -51,6 +51,7 @@ class IntroPage extends StatelessWidget {
               child: Text(
                 'Shop now',
                 style: TextStyle(
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
