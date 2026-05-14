@@ -43,7 +43,7 @@ In short, it acts like a bridge. It catches the click from the Google Nav Bar pa
             icon: Icons.shopping_bag_rounded,
             text: 'CART',
             iconActiveColor: Colors.black,
-            
+            textColor: Colors.black,
             )
       ]),
     );
